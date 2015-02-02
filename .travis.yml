@@ -1,0 +1,12 @@
+before_install:
+    - sudo apt-get install hg 
+
+install:
+    - hg clone "https://code.google.com/p/dactyl/"
+
+script:
+    - cd dactyl; make -C pentadactyl xpi
+
+after_script:
+    - ls -al
+    - ls -al ..
