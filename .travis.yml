@@ -1,5 +1,5 @@
 before_install:
-    - sudo apt-get install hg 
+    - sudo apt-get install mercurial
 
 install:
     - hg clone "https://code.google.com/p/dactyl/"
