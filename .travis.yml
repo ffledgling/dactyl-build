@@ -6,13 +6,14 @@ install:
 
 script:
     - cd dactyl; make -C pentadactyl xpi;cd -
+    - mv "dactyl/downloads/pentadactyl-1.2pre.xpi" "dactyl/downloads/pentadactyl-1.2pre.$(date +%Y%m%d).xpi"
     - ls -al dactyl/downloads/
 
 deploy:
     provider: releases
     api_key:
         secure: WdLSkRy5q+PeYdHLOhHnRRkAV+3udimw0caj+sMwKCUTyMXwEdOdbtqc6EsEUJvAhWc1MbJ26C4qLsVDai+30P649GzWbqyO2XFxMZycBnIQzeg3VtrLJ4wE6ubLXexGRbWxugUQuQAAWoQvdpUM8RgyiYTGU+K2g7B6LEw2yS8=
-    file: "dactyl/downloads/pentadactyl-1.2pre.xpi"
+    file: "dactyl/downloads/pentadactyl-1.2pre.$(date +%Y%m%d).xpi"
     skip-cleanup: true
     on:
         repo: ffledgling/dactyl-build
