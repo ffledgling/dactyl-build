@@ -1,0 +1,4 @@
+- [x] Build and release XPIs
+- [ ] Run the inbuilt tests for each release
+- [ ] Add support for other dactyl plugins
+- [ ] Find a better way to release than having a background cron-job
