@@ -5,6 +5,8 @@ install:
     - hg clone "https://code.google.com/p/dactyl/"
 
 script:
+    - sed -i 's/em:maxVersion=".*"/em:maxVersion="*"/' dactyl/pentadactyl/install.rdf
+    - cat dactyl/pentadactyl/install.rdf
     - cd dactyl; make -C pentadactyl xpi;cd -
     - mv "dactyl/downloads/pentadactyl-1.2pre.xpi" "dactyl/downloads/pentadactyl-1.2pre.$(date +%Y%m%d).xpi"
     - ls -al dactyl/downloads/
