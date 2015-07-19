@@ -1,8 +1,8 @@
 before_install:
-    - sudo apt-get install mercurial
+    - sudo apt-get install git
 
 install:
-    - hg clone "https://code.google.com/p/dactyl/"
+    - git clone "https://github.com/5digits/dactyl"
 
 script:
     - sed -i 's/em:maxVersion=".*"/em:maxVersion="*"/' dactyl/pentadactyl/install.rdf
